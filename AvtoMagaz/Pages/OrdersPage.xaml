@@ -1,0 +1,36 @@
+﻿<Page x:Class="AvtoMagaz.Pages.OrdersPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:AvtoMagaz.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="OrdersPage">
+
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock x:Name="lblTitle" Text="Мои заказы" FontSize="20" Margin="5"/>
+
+        <ListView x:Name="lvOrders" Grid.Row="1" Margin="5" SelectionChanged="lvOrders_SelectionChanged">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="№ заказа" DisplayMemberBinding="{Binding Id}" Width="80"/>
+                    <GridViewColumn Header="Дата" DisplayMemberBinding="{Binding OrderDate}" Width="150"/>
+                    <GridViewColumn Header="Сумма" DisplayMemberBinding="{Binding TotalAmount, StringFormat={}{0:C}}" Width="100"/>
+                    <GridViewColumn Header="Статус" DisplayMemberBinding="{Binding Status}" Width="100"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="5">
+            <Button x:Name="btnDetails" Content="Детали заказа" Padding="10,5" Click="Details_Click" IsEnabled="False"/>
+            <Button Content="На главную" Padding="10,5" Margin="5,0,0,0" Click="GoToMain_Click"/>
+        </StackPanel>
+    </Grid>
+</Page>
