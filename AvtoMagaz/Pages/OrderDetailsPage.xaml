@@ -15,7 +15,7 @@
         <ListView x:Name="lvItems" Margin="5" MaxHeight="200">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Товар" DisplayMemberBinding="{Binding Products.Name}" Width="200"/>
+                    <GridViewColumn Header="Товар" DisplayMemberBinding="{Binding Name}" Width="200"/>
                     <GridViewColumn Header="Кол-во" DisplayMemberBinding="{Binding Quantity}" Width="80"/>
                     <GridViewColumn Header="Цена" DisplayMemberBinding="{Binding Price, StringFormat={}{0:C}}" Width="100"/>
                     <GridViewColumn Header="Сумма" DisplayMemberBinding="{Binding Sum, StringFormat={}{0:C}}" Width="100"/>

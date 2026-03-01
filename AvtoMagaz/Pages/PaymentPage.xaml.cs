@@ -1,4 +1,5 @@
 ﻿using AvtoMagaz.Connect;
+using AvtoMagaz.Windows;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -37,6 +38,20 @@ namespace AvtoMagaz.Pages
         {
             string method = rbCard.IsChecked == true ? "Карта" : "Наличные";
 
+            // Если оплата картой - открываем окно ввода данных
+            if (method == "Карта")
+            {
+                var cardWindow = new PaymentCardWindow();
+                cardWindow.Owner = Window.GetWindow(this); // устанавливаем владельца
+                if (cardWindow.ShowDialog() != true || !cardWindow.PaymentSuccess)
+                {
+                    // Оплата не прошла или отменена
+                    MessageBox.Show("Оплата картой не выполнена.");
+                    return;
+                }
+            }
+
+            // Сохраняем платёж в БД
             var payment = new Payments
             {
                 OrderId = _orderId,
@@ -54,10 +69,20 @@ namespace AvtoMagaz.Pages
 
             Connection.entities.SaveChanges();
 
-            MessageBox.Show("Оплата прошла успешно!");
+            // Показываем окно с информацией о получении
+            ShowPickupInfo();
 
             // Возврат на главную страницу пользователя
             NavigationService.Navigate(new UserMainPage());
+        }
+
+        private void ShowPickupInfo()
+        {
+            string address = "г. Москва, ул. Автомобильная, д. 10";
+            DateTime pickupTime = DateTime.Now.AddHours(1); // через час
+            string message = $"Ваш заказ будет готов к выдаче по адресу:\n{address}\n\n" +
+                             $"Примерное время получения: {pickupTime:dd.MM.yyyy HH:mm}";
+            MessageBox.Show(message, "Информация о получении", MessageBoxButton.OK, MessageBoxImage.Information);
         }
 
         private void Cancel_Click(object sender, RoutedEventArgs e)

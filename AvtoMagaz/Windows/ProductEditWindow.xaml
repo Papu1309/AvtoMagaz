@@ -16,7 +16,7 @@
         <TextBlock Text="Количество на складе:"/>
         <TextBox x:Name="txtStock" Margin="5"/>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
-            <Button Content="Сохранить" Padding="10,5" Click="Save_Click"/>
+            <Button Content="Сохранить" Padding="10,5" Click="Save_Click" />
             <Button Content="Отмена" Padding="10,5" Margin="5,0" Click="Cancel_Click"/>
         </StackPanel>
     </StackPanel>

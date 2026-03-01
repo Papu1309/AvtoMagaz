@@ -9,6 +9,6 @@ namespace AvtoMagaz.Connect
     public static class Connection
     {
         // Статический экземпляр контекста для всего приложения
-        public static AvtomagazEntities2 entities = new AvtomagazEntities2();
+        public static AvtomagazEntities3 entities = new AvtomagazEntities3();
     }
 }

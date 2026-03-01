@@ -15,7 +15,7 @@ namespace AvtoMagaz.Connect
     public partial class Payments
     {
         public int Id { get; set; }
-        public Nullable<int> OrderId { get; set; }
+        public int OrderId { get; set; }
         public string PaymentMethod { get; set; }
         public decimal Amount { get; set; }
         public System.DateTime PaymentDate { get; set; }

@@ -13,10 +13,10 @@ namespace AvtoMagaz.Connect
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class AvtomagazEntities2 : DbContext
+    public partial class AvtomagazEntities3 : DbContext
     {
-        public AvtomagazEntities2()
-            : base("name=AvtomagazEntities2")
+        public AvtomagazEntities3()
+            : base("name=AvtomagazEntities3")
         {
         }
     

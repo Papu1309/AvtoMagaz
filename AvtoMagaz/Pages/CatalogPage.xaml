@@ -20,15 +20,22 @@
         <ListView x:Name="lvProducts" Grid.Row="1" Margin="5" SelectionMode="Single">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Название" DisplayMemberBinding="{Binding Name}" Width="200"/>
-                    <GridViewColumn Header="Описание" DisplayMemberBinding="{Binding Description}" Width="250"/>
+                    <GridViewColumn Header="Фото" Width="100">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Image Source="{Binding ImagePath}" Width="80" Height="80" Stretch="UniformToFill" Margin="2"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="Название" DisplayMemberBinding="{Binding Name}" Width="150"/>
+                    <GridViewColumn Header="Описание" DisplayMemberBinding="{Binding Description}" Width="200"/>
                     <GridViewColumn Header="Цена" DisplayMemberBinding="{Binding Price, StringFormat={}{0:C}}" Width="100"/>
                     <GridViewColumn Header="В наличии" DisplayMemberBinding="{Binding StockQuantity}" Width="80"/>
                     <GridViewColumn Header="Действие" Width="150">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
                                 <StackPanel Orientation="Horizontal">
-                                    <TextBox x:Name="txtQuantity" Text="1" Width="40" Margin="2"/>
+                                    <TextBox x:Name="txtQuantity" Text="1" Width="40" Margin="2" Style="{StaticResource {x:Type TextBox}}"/>
                                     <Button Content="В корзину" Padding="5,2" Click="AddToCart_Click" Tag="{Binding Id}"/>
                                 </StackPanel>
                             </DataTemplate>
@@ -36,8 +43,8 @@
                     </GridViewColumn>
                 </GridView>
             </ListView.View>
-        </ListView>
-
+        </ListView> 
+        
         <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="5">
             <Button Content="Перейти в корзину" Padding="10,5" Click="GoToCart_Click"/>
             <Button Content="На главную" Padding="10,5" Margin="5,0,0,0" Click="GoToMain_Click"/>
