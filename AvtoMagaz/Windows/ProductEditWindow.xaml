@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:AvtoMagaz.Windows"
         mc:Ignorable="d"
         Title="ProductEditWindow" Height="450" Width="800">
-    <StackPanel Margin="10">
+    <StackPanel Margin="10" Background="Beige">
         <TextBlock Text="Название:"/>
         <TextBox x:Name="txtName" Margin="5"/>
         <TextBlock Text="Описание:"/>

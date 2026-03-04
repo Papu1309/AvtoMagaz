@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:AvtoMagaz.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="UserMainPage">
+      Title="UserMainPage" Background="Beige">
 
     <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
         <TextBlock Text="Добро пожаловать в автомагазин!" FontSize="20" Margin="10"/>

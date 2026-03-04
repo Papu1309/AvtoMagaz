@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:AvtoMagaz.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="CheckoutPage">
+      Title="CheckoutPage" Background="Beige">
 
     <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="400">
         <TextBlock Text="Подтверждение заказа" FontSize="20" Margin="10"/>

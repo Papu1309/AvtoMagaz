@@ -6,13 +6,16 @@
       xmlns:local="clr-namespace:AvtoMagaz.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="RegisterPage">
+      Title="RegisterPage" Background="Beige">
 
-    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="300">
-        <TextBlock Text="Регистрация" FontSize="20" Margin="10"/>
-        <TextBox x:Name="txtLogin" Margin="5" Padding="5" Text="newuser"/>
-        <PasswordBox x:Name="txtPassword" Margin="5" Padding="5" Password="pass"/>
-        <PasswordBox x:Name="txtConfirm" Margin="5" Padding="5" Password="pass"/>
+    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="300" >
+        <TextBlock Text="Регистрация" FontSize="20" Margin="10" HorizontalAlignment="Center"/>
+        <TextBlock Text="Логин" Margin="7 0 0 0"></TextBlock>
+        <TextBox x:Name="txtLogin" Margin="5" Padding="5" />
+        <TextBlock Text="Пароль" Margin="7 0 0 0"></TextBlock>
+        <PasswordBox x:Name="txtPassword" Margin="5" Padding="5" />
+        <TextBlock Text="Повторите пароль" Margin="7 0 0 0"></TextBlock>
+        <PasswordBox x:Name="txtConfirm" Margin="5" Padding="5" />
         <Button Content="Зарегистрироваться" Margin="5" Padding="5" Click="Register_Click"/>
         <Button Content="Назад" Margin="5" Padding="5" Click="Back_Click"/>
     </StackPanel>

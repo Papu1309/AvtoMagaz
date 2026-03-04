@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:AvtoMagaz.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="OrderDetailsPage">
+      Title="OrderDetailsPage" Background="Beige">
 
     <StackPanel Margin="10">
         <TextBlock x:Name="txtOrderInfo" FontSize="16" FontWeight="Bold" Margin="5"/>

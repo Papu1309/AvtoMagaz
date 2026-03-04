@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:AvtoMagaz.Windows"
         mc:Ignorable="d"
         Title="PaymentCardWindow" Height="450" Width="800">
-    <StackPanel Margin="20">
+    <StackPanel Margin="20" Background="Beige">
         <TextBlock Text="Введите данные карты" Style="{StaticResource HeaderStyle}" HorizontalAlignment="Center"/>
 
         <TextBlock Text="Номер карты" Margin="0,10,0,0"/>

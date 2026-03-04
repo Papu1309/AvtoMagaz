@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:AvtoMagaz.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="AdminMainPage">
+      Title="AdminMainPage" Background="Beige">
 
     <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
         <TextBlock Text="Панель администратора" FontSize="20" Margin="10"/>
