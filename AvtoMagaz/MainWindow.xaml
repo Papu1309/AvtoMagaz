@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AvtoMagaz"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Autoshop" Height="450" Width="800" Icon="/Images/4444.jpg">
     <Grid>
         <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden"/>
     </Grid>

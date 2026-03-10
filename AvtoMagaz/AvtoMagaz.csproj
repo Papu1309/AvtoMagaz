@@ -253,6 +253,8 @@
       <DependentUpon>AvtomagazEntities.edmx</DependentUpon>
       <LastGenOutput>AvtomagazEntities.cs</LastGenOutput>
     </Content>
+    <Resource Include="Images\4444.jpg" />
+    <Resource Include="Images\1212.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
